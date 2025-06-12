@@ -75,7 +75,6 @@ def send_email(body: str):
         msg.attach(MIMEText(body, "plain"))
 
         # 连接 SMTP 服务器
-        logger.info(int(SMTP_PORT))
         server = smtplib.SMTP(SMTP_SERVER, int(SMTP_PORT))
         server.starttls()
         server.login(EMAIL, PASSWORD)  # 登录 SMTP 服务器
